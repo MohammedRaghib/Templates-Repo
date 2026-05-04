@@ -103,6 +103,12 @@ DATABASES = {
     # }
 }
 
+# DATABASE_ROUTERS = ['proj.routers.ProjectRouter']
+
+# MIGRATION_MODULES = {
+#     'erp': None,
+# }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
