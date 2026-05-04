@@ -7,6 +7,8 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway"
     ports:
-      - "8000:8000"
+      - "8000:8000" # Change first port if necessary
+    environment:
+      - PYTHONUNBUFFERED=1
     stdin_open: true
     tty: true

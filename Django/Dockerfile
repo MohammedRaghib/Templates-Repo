@@ -21,6 +21,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
+# Change ports if necessary
 EXPOSE 9010
 
 CMD ["python", "manage.py", "runserver", "0.0.0.0:9010"]
