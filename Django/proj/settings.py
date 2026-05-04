@@ -77,11 +77,30 @@ WSGI_APPLICATION = 'proj.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
+MS_USER = config('MS_USER')
+MS_PASSWORD = config('MS_PASSWORD')
+MS_HOST = config('MS_HOST')
+MS_DB_NAME = config('MS_DB_NAME')
+
 DATABASES = {
+    # sqlite
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    },
+    # mssql
+    # 'default': {
+    #     'ENGINE': 'mssql',
+    #     'NAME': MS_DB_NAME,
+    #     'USER': MS_USER,
+    #     'PASSWORD': MS_PASSWORD,
+    #     'HOST': MS_HOST,
+    #     'PORT': '',
+    #     'OPTIONS': {
+    #         'driver': 'ODBC Driver 17 for SQL Server',
+    #         'extra_params': 'TrustServerCertificate=yes;'
+    #     },
+    # }
 }
 
 
