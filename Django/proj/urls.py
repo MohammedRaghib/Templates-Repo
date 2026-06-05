@@ -21,4 +21,6 @@ from .views import serve_media_secure
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('media/<path:filepath>', serve_media_secure, name='serve_media_secure'),
+    path('api/', include('api_app.urls')),
+    path('', include('main.urls')),
 ]
